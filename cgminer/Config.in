@@ -1,0 +1,3 @@
+config CGMINER_ANTS1
+	bool "Enable Antminer S1 support"
+	default y
