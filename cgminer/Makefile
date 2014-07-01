@@ -11,15 +11,15 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=cgminer
 
 ifeq ($(CONFIG_CGMINER_ANTS1),y)
-PKG_VERSION:=ants1-4.3.2a-85fcf0c
-PKG_REV:=85fcf0cae58975dc6f322a4ab1ff8dcdcde77362
+PKG_VERSION:=1.0.0
+PKG_REV:=412dbe0d427b6a1381b5136f689b7aaa4578fa95
 endif
 
 PKG_RELEASE:=1
 PKG_INSTALL:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV).tar.bz2
-PKG_SOURCE_URL:=git://github.com/kanoi/cgminer.git
+PKG_SOURCE_URL:=git://github.com/basil3legs/cgminer.git
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_VERSION:=$(PKG_REV)
@@ -32,7 +32,7 @@ define Package/cgminer
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=cgminer
-	URL:=https://github.com/kanoi/cgminer
+	URL:=https://github.com/basil3legs/cgminer
 ifeq ($(CONFIG_TARGET_brcm2708_RaspberryPi),y)
 	DEPENDS:=+libcurl +libpthread +jansson +udev +libncurses
 else
